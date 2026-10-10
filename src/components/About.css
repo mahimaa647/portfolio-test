@@ -1,0 +1,130 @@
+.about-section { background: var(--bg-surface); }
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.about-card-icon, .edu-icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.about-card-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-card-text strong { color: var(--primary-light); }
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.info-item { display: flex; flex-direction: column; gap: 4px; }
+
+.info-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* ── Right Column ── */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Education Timeline ── */
+.edu-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+  position: relative;
+}
+
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary-dark), transparent);
+}
+
+.edu-item {
+  display: flex;
+  gap: 20px;
+  padding-left: 8px;
+}
+
+.edu-dot {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  margin-top: 4px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.5);
+}
+
+.edu-degree {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.edu-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.edu-grade {
+  background: rgba(244, 114, 182, 0.12);
+  color: var(--accent);
+  border-color: rgba(244, 114, 182, 0.2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .about-inner { grid-template-columns: 1fr; }
+  .about-info-grid { grid-template-columns: 1fr; }
+}

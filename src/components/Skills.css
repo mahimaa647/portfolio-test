@@ -1,0 +1,132 @@
+.skills-section {
+  background: var(--bg-dark);
+}
+
+/* ── Tech Stack Pills ── */
+.tech-stack-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.tech-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: var(--gradient-card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-pill:hover {
+  border-color: var(--primary);
+  background: rgba(167, 139, 250, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(167, 139, 250, 0.15);
+}
+
+.tech-icon { font-size: 1.3rem; }
+
+.tech-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ── Tabs ── */
+.skill-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(167, 139, 250, 0.08);
+}
+
+.skill-tab.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* ── Skills Grid ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+}
+
+.skill-item {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.skill-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-light);
+}
+
+.skill-bar-bg {
+  height: 8px;
+  background: rgba(167, 139, 250, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  animation: grow 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+  transform-origin: left;
+}
+
+@keyframes grow {
+  from { width: 0 !important; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .tech-stack-row { gap: 8px; }
+  .tech-pill { padding: 10px 16px; }
+}
